@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV Zaky Sirojudin – 3D Interactive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #2c5364, #00bcd4);
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 40px 15px;
+      perspective: 1000px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .container * {
+      transform-style: preserve-3d;
+      transition: transform 0.35s cubic-bezier(.3,1.6,.4,.9), text-shadow 0.35s;
+    }
+
+    .container *:hover {
+      transform: translateZ(18px) scale(1.03);
+      text-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+
+    .photo {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .photo img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #00acc1;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.6em;
+      color: #00e5ff;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 2px;
+    }
+
+    h1 span {
+      display: inline-block;
+      animation: floatLetters 3s ease-in-out infinite;
+    }
+
+    .section h2 {
+      color: #4dd0e1;
+      font-size: 1.5em;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #00bcd4;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .section h2 span {
+      display: inline-block;
+      animation: floatLetters 3s ease-in-out infinite;
+    }
+
+    @keyframes floatLetters {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0px); }
+    }
+
+    p.center {
+      text-align: center;
+      font-size: 0.95em;
+      color: #eee;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    .section p, .section ul {
+      margin-left: 10px;
+      font-size: 1em;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    a {
+      color: #00e5ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 28px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      .section h2 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="photo">
+      <img src="foto.jpg" alt="Zaky Sirojudin">
+    </div>
+    <h1>
+      <span>Z</span><span>a</span><span>k</span><span>y</span> <span>S</span><span>i</span><span>r</span><span>o</span><span>j</span><span>u</span><span>d</span><span>i</span><span>n</span>
+    </h1>
+    <p class="center">Bogor, Jawa Barat | <a href="mailto:zakysirojudin48@gmail.com">zakysirojudin48@gmail.com</a> | <a href="http://wa.me/6283194105349" target="_blank">WhatsApp</a></p>
+
+    <div class="section">
+      <h2>👤 Profil Singkat</h2>
+      <p>Saya adalah mahasiswa aktif di Universitas Tazkia Bogor, Program Studi Ekonomi Syariah. Saya mulai tertarik dengan dunia perbankan sejak duduk di bangku kelas 1 SMA, dan ketertarikan itu terus berkembang hingga sekarang.</p>
+    </div>
+
+    <div class="section">
+      <h2>🎓 Pendidikan</h2>
+      <p><strong>Universitas Tazkia</strong> – Ekonomi Syariah</p>
+    </div>
+
+    <div class="section">
+      <h2>💼 Pengalaman</h2>
+      <ul>
+        <li>Reseller Regarsport Jersey (2023–2024)</li>
+        <li>Website Portofolio Pribadi (React & Tailwind CSS)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🛠 Keterampilan</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Microsoft Word</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🔗 Media Sosial</h2>
+      <p>Instagram: <a href="https://www.instagram.com/szkyi_" target="_blank">@szkyi_</a></p>
+    </div>
+  </div>
+</body>
+</html>
